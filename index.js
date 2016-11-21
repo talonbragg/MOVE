@@ -2,6 +2,11 @@ var myElement = document.getElementById('dot');
 var styles = window.getComputedStyle(myElement);
 var topStyle = parseInt(styles.top);
 var left = parseInt(styles.left);
+
+var myElement2 = document.getElementById('dot2');
+var styles2 = window.getComputedStyle(myElement2);
+var topStyle2 = parseInt(styles.top);
+var left2 = parseInt(styles.left);
 function moveLeft() {
 	var newLeft = left - 10;
 	left = newLeft;
