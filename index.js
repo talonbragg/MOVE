@@ -6,8 +6,8 @@ var left = parseInt(styles.left);
 //Gold
 var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
-var topStyle2 = parseInt(styles.top);
-var left2 = parseInt(styles.left);
+var topStyle2 = parseInt(styles2.top);
+var left2 = parseInt(styles2.left);
 //functions
 function moveLeft() {
 	var newLeft = left - 5;
