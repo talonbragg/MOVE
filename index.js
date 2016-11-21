@@ -8,6 +8,8 @@ var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles2.top);
 var left2 = parseInt(styles2.left);
+//collision
+var hit_list = $("#dot").collision("#dot2");
 //functions
 function moveLeft() {
 	var newLeft = left - 5;
@@ -60,7 +62,7 @@ function moveGold() {
 	myElement2.style.top = theTop + 'px';
 	myElement2.style.left = theLeft + 'px';
 	setTimeout(arguments.callee, 31000);
-		if (myElement.style.top === myElement2.style.top && myElement.style.left === myElement2.style.left) {
+		if (hit_list) {
 			confirm("You Win!");
 			document.location.reload();
 		}
