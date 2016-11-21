@@ -7,3 +7,18 @@ function moveLeft() {
 	left = newLeft;
 	document.getElementById("dot").style.left = newLeft + 'px';
 }
+function moveUp() {
+	var newTop = top - 1;
+	top = newTop;
+	document.getElementById("dot").style.top = newTop + 'px';
+}
+function moveRight() {
+	var newLeft2 = left + 1;
+	left = newLeft2;
+	document.getElementById("dot").style.left = newLeft2 + 'px';
+}
+function moveDown() {
+	var newTop2 = top + 1;
+	top = newTop2
+	document.getElementById("dot").style.top = newTop2 + 'px';
+}
