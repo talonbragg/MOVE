@@ -10,6 +10,7 @@ p {
    font-size: 80px;
 }
 .dot2 {
+   position: absolute;
    top: 350px;
    left: 950px;
 }
