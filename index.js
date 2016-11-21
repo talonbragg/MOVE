@@ -10,28 +10,28 @@ var topStyle2 = parseInt(styles.top);
 var left2 = parseInt(styles.left);
 //functions
 function moveLeft() {
-	var newLeft = left - 10;
+	var newLeft = left - 5;
 	left = newLeft;
 	myElement.style.left = newLeft + 'px';
-	setTimeout(arguments.callee, 500);
+	
 }
 function moveUp() {
-	var newTop = topStyle - 10;
+	var newTop = topStyle - 5;
 	topStyle = newTop;
 	myElement.style.top = newTop + 'px';
-	setTimeout(arguments.callee, 500);
+	
 }
 function moveRight() {
-	var newLeft2 = left + 10;
+	var newLeft2 = left + 5;
 	left = newLeft2;
 	myElement.style.left = newLeft2 + 'px';
-	setTimeout(arguments.callee, 500);
+	
 }
 function moveDown() {
-	var newTop2 = topStyle + 10;
+	var newTop2 = topStyle + 5;
 	topStyle = newTop2
 	myElement.style.top = newTop2 + 'px';
-	setTimeout(arguments.callee, 500);
+	
 }
 function moveSelection(evt) {
                 switch (evt.keyCode) {
