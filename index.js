@@ -28,5 +28,5 @@ function moveDown() {
 	myElement.style.top = newTop2 + 'px';
 }
 function moveGold() {
-	Math.floor(Math.random() * topStyle) + left;
+	Math.floor(Math.random() * left) + topStyle;
 }
