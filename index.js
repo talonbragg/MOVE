@@ -10,6 +10,7 @@ function moveLeft() {
 }
 function moveUp() {
 	var newTop = top - 5;
+	console.log(top);
 	top = newTop;
 	myElement.style.top = newTop + 'px';
 }
