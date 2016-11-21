@@ -27,6 +27,52 @@ function moveDown() {
 	topStyle = newTop2
 	myElement.style.top = newTop2 + 'px';
 }
+	   function leftArrowPressed() {
+           var newLeft = left - 30;
+	   left = newLeft;
+	   myElement.style.left = newLeft + 'px';
+	   }
+            function rightArrowPressed() {
+            var newLeft2 = left + 30;
+	    left = newLeft2;
+	    myElement.style.left = newLeft2 + 'px';
+
+            }
+
+            function upArrowPressed() {
+            var newTop = topStyle - 30;
+	    topStyle = newTop;
+	    myElement.style.top = newTop + 'px';
+            }
+
+            function downArrowPressed() {
+            var newTop2 = topStyle + 30;
+	    topStyle = newTop2;
+	    myElement.style.top = newTop2 + 'px';
+            }
+
+            function moveSelection(evt) {
+                switch (evt.keyCode) {
+                    case 37:
+                    leftArrowPressed();
+                    break;
+                    case 39:
+                    rightArrowPressed();
+                    break;
+                    case 38:
+                    upArrowPressed();
+                    break;
+                    case 40:
+                    downArrowPressed();
+                    break;
+                    }
+                };
+
+        function docReady()
+        {
+          
+          window.addEventListener('keydown', moveSelection);
+        }
 function moveGold() {
 	var theTop = Math.floor(Math.random() * screen.height) + 1;
 	var theLeft = Math.floor(Math.random() * screen.width) + 1;
