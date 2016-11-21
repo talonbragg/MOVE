@@ -1,4 +1,4 @@
-var myElement = document.querySelector('#dot');
+var myElement = document.getElementById('dot');
 var styles = window.getComputedStyle(myElement);
 var top = parseInt(styles.top);
 var left = parsenInt(styles.left);
