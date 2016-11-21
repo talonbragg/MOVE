@@ -1,7 +1,10 @@
-div {
+.dot {
    position: absolute;
    top: 100px;
    left: 100px;
+}
+.buttons {
+   text-align: center;
 }
 p {
    font-size: 80px;
