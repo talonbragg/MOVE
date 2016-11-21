@@ -8,22 +8,22 @@ var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles.top);
 var left2 = parseInt(styles.left);
 function moveLeft() {
-	var newLeft = left - 10;
+	var newLeft = left - 30;
 	left = newLeft;
 	myElement.style.left = newLeft + 'px';
 }
 function moveUp() {
-	var newTop = topStyle - 10;
+	var newTop = topStyle - 30;
 	topStyle = newTop;
 	myElement.style.top = newTop + 'px';
 }
 function moveRight() {
-	var newLeft2 = left + 10;
+	var newLeft2 = left + 30;
 	left = newLeft2;
 	myElement.style.left = newLeft2 + 'px';
 }
 function moveDown() {
-	var newTop2 = topStyle + 10;
+	var newTop2 = topStyle + 30;
 	topStyle = newTop2
 	myElement.style.top = newTop2 + 'px';
 }
