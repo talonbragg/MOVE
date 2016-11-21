@@ -1,12 +1,14 @@
+//Guy
 var myElement = document.getElementById('dot');
 var styles = window.getComputedStyle(myElement);
 var topStyle = parseInt(styles.top);
 var left = parseInt(styles.left);
-
+//Gold
 var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles.top);
 var left2 = parseInt(styles.left);
+//functions
 function moveLeft() {
 	var newLeft = left - 30;
 	left = newLeft;
@@ -27,59 +29,14 @@ function moveDown() {
 	topStyle = newTop2
 	myElement.style.top = newTop2 + 'px';
 }
-	   function leftArrowPressed() {
-           var newLeft = left - 30;
-	   left = newLeft;
-	   myElement.style.left = newLeft + 'px';
-	   }
-            function rightArrowPressed() {
-            var newLeft2 = left + 30;
-	    left = newLeft2;
-	    myElement.style.left = newLeft2 + 'px';
-
-            }
-
-            function upArrowPressed() {
-            var newTop = topStyle - 30;
-	    topStyle = newTop;
-	    myElement.style.top = newTop + 'px';
-            }
-
-            function downArrowPressed() {
-            var newTop2 = topStyle + 30;
-	    topStyle = newTop2;
-	    myElement.style.top = newTop2 + 'px';
-            }
-
-            function moveSelection(evt) {
-                switch (evt.keyCode) {
-                    case 37:
-                    leftArrowPressed();
-                    break;
-                    case 39:
-                    rightArrowPressed();
-                    break;
-                    case 38:
-                    upArrowPressed();
-                    break;
-                    case 40:
-                    downArrowPressed();
-                    break;
-                    }
-                };
-
-        function docReady()
-        {
-          
-          window.addEventListener('keydown', moveSelection);
-        }
+	   
 function moveGold() {
 	var theTop = Math.floor(Math.random() * screen.height) + 1;
 	var theLeft = Math.floor(Math.random() * screen.width) + 1;
 	myElement2.style.top = theTop + 'px';
 	myElement2.style.left = theLeft + 'px';
 	setTimeout(arguments.callee, 12000);
-		if (myElement.style.top === myElement2.style.top && myElement.style.left === myElement2.style.left) {
+		if (myElement.style.top == myElement2.style.top && myElement.style.left == myElement2.style.left) {
 			confirm("You Win!");
 			document.location.reload();
 		}
