@@ -29,7 +29,27 @@ function moveDown() {
 	topStyle = newTop2
 	myElement.style.top = newTop2 + 'px';
 }
-	   
+function moveSelection(evt) {
+                switch (evt.keyCode) {
+                    case 37:
+                    moveLeft();
+                    break;
+                    case 39:
+                    moveRight();
+                    break;
+                    case 38:
+                    moveUp();
+                    break;
+                    case 40:
+                    moveDown();
+                    break;
+                    }
+                };
+
+        function docReady()
+        {
+          window.addEventListener('keydown', moveSelection);
+        }
 function moveGold() {
 	var theTop = Math.floor(Math.random() * screen.height) + 1;
 	var theLeft = Math.floor(Math.random() * screen.width) + 1;
