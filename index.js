@@ -12,25 +12,25 @@ var left2 = parseInt(styles2.left);
 var hit_list = $("#dot").collision("#dot2");
 //functions
 function moveLeft() {
-	var newLeft = left - 5;
+	var newLeft = left - 4;
 	left = newLeft;
 	myElement.style.left = newLeft + 'px';
 	
 }
 function moveUp() {
-	var newTop = topStyle - 5;
+	var newTop = topStyle - 4;
 	topStyle = newTop;
 	myElement.style.top = newTop + 'px';
 	
 }
 function moveRight() {
-	var newLeft2 = left + 5;
+	var newLeft2 = left + 4;
 	left = newLeft2;
 	myElement.style.left = newLeft2 + 'px';
 	
 }
 function moveDown() {
-	var newTop2 = topStyle + 5;
+	var newTop2 = topStyle + 4;
 	topStyle = newTop2
 	myElement.style.top = newTop2 + 'px';
 	
