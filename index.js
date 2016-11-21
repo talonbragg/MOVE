@@ -32,5 +32,5 @@ function moveGold() {
 	var theLeft = Math.floor(Math.random() * screen.width) + 1;
 	myElement2.style.top = theTop + 'px';
 	myElement2.style.left = theLeft + 'px';
-	setTimeout(arguments.callee, 5000);
+	setTimeout(arguments.callee, 12000);
 }
