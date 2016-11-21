@@ -33,4 +33,8 @@ function moveGold() {
 	myElement2.style.top = theTop + 'px';
 	myElement2.style.left = theLeft + 'px';
 	setTimeout(arguments.callee, 12000);
+		if (myElement.style.top === myElement2.style.top && myElement.style.left === myElement2.style.left) {
+			confirm("You Win!");
+			document.location.reload();
+		}
 }
