@@ -12,29 +12,29 @@ var left2 = parseInt(styles2.left);
 var hit_list = $("#dot").collision("#dot2");
 //functions
 const speed = 5;
-
 function moveLeft() {
-    var newLeft = left - speed;
-    left = newLeft;
-    myElement.style.left = newLeft + 'px';
-
+	var newLeft = left - 1;
+	left = newLeft;
+	myElement.style.left = newLeft + 'px';
+	
 }
 function moveUp() {
-    var newTop = topStyle - speed;
-    topStyle = newTop;
-    myElement.style.top = newTop + 'px';
-
+	var newTop = topStyle - 1;
+	topStyle = newTop;
+	myElement.style.top = newTop + 'px';
+	
 }
 function moveRight() {
-    var newLeft2 = left + speed;
-    left = newLeft2;
-    myElement.style.left = newLeft2 + 'px';
-
+	var newLeft2 = left + 1;
+	left = newLeft2;
+	myElement.style.left = newLeft2 + 'px';
+	
 }
 function moveDown() {
-    var newTop2 = topStyle + speed;
-    topStyle = newTop2
-    myElement.style.top = newTop2 + 'px';
+	var newTop2 = topStyle + 1;
+	topStyle = newTop2
+	myElement.style.top = newTop2 + 'px';
+	
 }
 }
 function moveSelection(evt) {
