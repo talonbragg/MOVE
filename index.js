@@ -1,61 +1,68 @@
 //Guy
-var myElement = document.getElementById('dot');
-var styles = window.getComputedStyle(myElement);
-var topStyle = parseInt(styles.top);
-var left = parseInt(styles.left);
+var myElement = document.getElementById("dot");
+
+var move_left = false;
+var move_up = false;
+var move_right = false;
+var move_down = false;
+
 //Gold
 var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles2.top);
 var left2 = parseInt(styles2.left);
 //functions
-var speed = 5;
-function moveLeft() {
-	var newLeft = left - speed;
-	left = newLeft;
-	myElement.style.left = newLeft + 'px';
-	
-}
-function moveUp() {
-	var newTop = topStyle - speed;
-	topStyle = newTop;
-	myElement.style.top = newTop + 'px';
-	
-}
-function moveRight() {
-	var newLeft2 = left + speed;
-	left = newLeft2;
-	myElement.style.left = newLeft2 + 'px';
-	
-}
-function moveDown() {
-	var newTop2 = topStyle + speed;
-	topStyle = newTop2
-	myElement.style.top = newTop2 + 'px';
-	
+setInterval(function (){
+	if (move_left) myElement.style.left = (getIntfromStyle(myElement.style.left) - 1) + 'px';
+	if (move_up) myElement.style.top = (getIntfromStyle(myElement.style.top) - 1) + 'px';
+	if (move_right) myElement.style.left = (getIntfromStyle(myElement.style.left) + 1) + 'px';
+	if (move_down) myElement.style.top = (getIntfromStyle(myElement.style.top) + 1) + 'px';
+}, 100);
+
+// with this function, you dont need topStyle & left variables to store previous positions
+// you can get current positioin easilysily
+function getIntfromStyle(in_style) {
+	return parseInt(in_style.replace('px', ''));
 }
 
-function moveSelection(evt) {
-                switch (evt.keyCode) {
-                    case 37:
-                    moveLeft();
-                    break;
-                    case 39:
-                    moveRight();
-                    break;
-                    case 38:
-                    moveUp();
-                    break;
-                    case 40:
-                    moveDown();
-                    break;
-                    }
-                };
+// i use keyboard to tell code when character should be moved and when must stop
+document.onkeydown = function(e) {
+    e = e || window.event;
+    switch(e.which || e.keyCode) {
+		case 37: // left
+			move_left = true;
+			break;
+        case 38: // up
+			move_up = true;
+			break;
+        case 39: // right
+			move_right = true;
+			break;
+        case 40: // down
+			move_down = true;
+			break;
+        default: return; // exit this handler for other keys
+	}
+	e.preventDefault(); // prevent the default action (scroll / move caret)
+}
 
-        function docReady()
-        {
-          window.addEventListener('keydown', moveSelection);
-        }
+document.onkeyup = function(e) {
+    e = e || window.event;
+    switch(e.which || e.keyCode) {
+		case 37: // left
+			move_left = false;
+			break;
+        case 38: // up
+			move_up = false;
+			break;
+        case 39: // right
+			move_right = false;
+			break;
+        case 40: // down
+			move_down = false;
+			break;
+	}
+}
 function moveGold() {
 	var theTop = Math.floor(Math.random() * screen.height) + 1;
 	var theLeft = Math.floor(Math.random() * screen.width) + 1;
