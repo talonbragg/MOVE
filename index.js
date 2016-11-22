@@ -36,7 +36,7 @@ function moveDown() {
 	myElement.style.top = newTop2 + 'px';
 	
 }
-}
+
 function moveSelection(evt) {
                 switch (evt.keyCode) {
                     case 37:
