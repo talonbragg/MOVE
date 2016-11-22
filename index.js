@@ -8,8 +8,6 @@ var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles2.top);
 var left2 = parseInt(styles2.left);
-//collision
-var hit_list = $("#dot").collision("#dot2");
 //functions
 var speed = 5;
 function moveLeft() {
