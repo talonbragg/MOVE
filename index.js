@@ -9,7 +9,7 @@ var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles2.top);
 var left2 = parseInt(styles2.left);
 //functions
-var speed = 1;
+var speed = 5;
 function moveLeft() {
 	var newLeft = left - speed;
 	left = newLeft;
