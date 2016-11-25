@@ -1,19 +1,14 @@
+
 //Guy
 var myElement = document.getElementById('dot');
 var styles = window.getComputedStyle(myElement);
 var topStyle = parseInt(styles.top);
 var left = parseInt(styles.left);
-var height = parseInt(styles.height);
 //Gold
 var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles2.top);
 var left2 = parseInt(styles2.left);
-//Stuff
-var charTop = topStyle;
-var charHeight = height);
-//Stuff2
-var goldTop = topStyle2;
 //functions
 var speed = 5;
 function moveLeft() {
@@ -94,7 +89,5 @@ function moveGold() {
     var fiveMinutes = 60 / 2,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
-	if(charTop + charHeight > goldTop) {
-        confirm('You Win!');   
-    }
+
 }
