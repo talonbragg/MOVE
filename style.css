@@ -1,7 +1,7 @@
 .dot {
    position: absolute;
-   top: 50%;
-   left: 50%;
+   top: 500px;
+   left: 500px;
 }
 .buttons {
    text-align: center;
