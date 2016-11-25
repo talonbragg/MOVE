@@ -19,4 +19,5 @@
 #time {
    color: red;
    font-family: 'Orbitron';
+   position: fixed;
 }
