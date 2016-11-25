@@ -3,16 +3,17 @@ var myElement = document.getElementById('dot');
 var styles = window.getComputedStyle(myElement);
 var topStyle = parseInt(styles.top);
 var left = parseInt(styles.left);
+var height = parseInt(styles.height);
 //Gold
 var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles2.top);
 var left2 = parseInt(styles2.left);
 //Stuff
-var charTop = parseInt(myElement.style.top)
-var charHeight = parseInt(myElement.style.height);
+var charTop = topStyle;
+var charHeight = height);
 //Stuff2
-var goldTop = parseInt(myElement2.style.top);
+var goldTop = topStyle2;
 //functions
 var speed = 5;
 function moveLeft() {
