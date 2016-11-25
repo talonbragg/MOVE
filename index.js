@@ -8,6 +8,11 @@ var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles2.top);
 var left2 = parseInt(styles2.left);
+//Stuff
+var charTop = parseInt(myElement.style.top)
+var charHeight = parseInt(myElement.style.height);
+//Stuff2
+var goldTop = parseInt(myElement2.style.top);
 //functions
 var speed = 5;
 function moveLeft() {
@@ -88,5 +93,7 @@ function moveGold() {
     var fiveMinutes = 60 / 2,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
-
+	if(charTop + charHeight > goldTop) {
+        confirm('You Win!');   
+    }
 }
