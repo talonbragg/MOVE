@@ -4,11 +4,29 @@ var myElement = document.getElementById('dot');
 var styles = window.getComputedStyle(myElement);
 var topStyle = parseInt(styles.top);
 var left = parseInt(styles.left);
+//X and Y for Guy
+var guyX1 = left;
+var guyX2 = left + parseInt(styles.width);
+var guyX3 = left + parseInt(styles.width);
+var guyX4 = left;
+var guyY1 = topStyle;
+var guyY2 = topStyle;
+var guyY3 = topStyle + parseInt(styles.height);
+var guyY4 = topStyle + parseInt(styles.height);
 //Gold
 var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles2.top);
 var left2 = parseInt(styles2.left);
+//X and Y for gold
+var goldX1 = left2;
+var goldX2 = left2 + parseInt(styles2.width);
+var goldX3 = left2 + parseInt(styles2.width);
+var goldX4 = left2;
+var goldY1 = topStyle2;
+var goldY2 = topStyle2;
+var goldY3 = topStyle2 + parseInt(styles2.height);
+var goldY4 = topStyle2 + parseInt(styles2.height);
 //functions
 var speed = 5;
 function moveLeft() {
