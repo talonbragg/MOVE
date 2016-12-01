@@ -29,32 +29,32 @@ function moveLeft() {
     var newLeft = left - speed;
     left = newLeft;
     myElement.style.left = newLeft + 'px';
-    var changeX = window.getComputedStyle(styles.width);
-    var changeY = window.getComputedStyle(styles.height);
+    var changeX = window.getComputedStyle(guyWidth);
+    var changeY = window.getComputedStyle(guyHeight);
 }
 
 function moveUp() {
     var newTop = topStyle - speed;
     topStyle = newTop;
     myElement.style.top = newTop + 'px';
-    var changeX = window.getComputedStyle(styles.width);
-    var changeY = window.getComputedStyle(styles.height);
+    var changeX = window.getComputedStyle(guyWidth);
+    var changeY = window.getComputedStyle(guyHeight);
 }
 
 function moveRight() {
     var newLeft2 = left + speed;
     left = newLeft2;
     myElement.style.left = newLeft2 + 'px';
-    var changeX = window.getComputedStyle(styles.width);
-    var changeY = window.getComputedStyle(styles.height);
+    var changeX = window.getComputedStyle(guyWidth);
+    var changeY = window.getComputedStyle(guyHeight);
 }
 
 function moveDown() {
     var newTop2 = topStyle + speed;
     topStyle = newTop2
     myElement.style.top = newTop2 + 'px';
-    var changeX = window.getComputedStyle(styles.width);
-    var changeY = window.getComputedStyle(styles.height);
+    var changeX = window.getComputedStyle(guyWidth);
+    var changeY = window.getComputedStyle(guyHeight);
 }
 
 function moveSelection(evt) {
