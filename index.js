@@ -51,7 +51,7 @@ function moveRight() {
 
 function moveDown() {
     var newTop2 = topStyle + speed;
-    topStyle = newTop2
+    topStyle = newTop2;
     myElement.style.top = newTop2 + 'px';
     var changeX = window.getComputedStyle(guyWidth);
     var changeY = window.getComputedStyle(guyHeight);
@@ -72,7 +72,7 @@ function moveSelection(evt) {
             moveDown();
             break;
     }
-};
+}
 
 function docReady() {
     window.addEventListener('keydown', moveSelection);
@@ -83,23 +83,20 @@ function moveGold() {
     var theLeft = Math.floor(Math.random() * screen.width) + 1;
     myElement2.style.top = theTop + 'px';
     myElement2.style.left = theLeft + 'px';
-    setTimeout(arguments.callee, 31000);
     if (topStyle2 === topStyle && left === left2) {
         confirm("You Win!");
         document.location.reload();
 	//collision detection
-        function collision() {
-            if (guyY2 < goldY1 || guyX1 > goldX1 || guyY1 < goldY2 || guyX1 < goldX1 || guyY2 < goldY1 && guyX2 > goldX1 || guyY1 > goldY2 && guyX1 > goldX2 || guyY1 > goldY2 && guyX1 < goldX2 || guyY2 < goldY1 && guyX2 < goldX1) {
+        if (guyY2 < goldY1 || guyX1 > goldX1 || guyY1 < goldY2 || guyX1 < goldX1 || guyY2 < goldY1 && guyX2 > goldX1 || guyY1 > goldY2 && guyX1 > goldX2 || guyY1 > goldY2 && guyX1 < goldX2 || guyY2 < goldY1 && guyX2 < goldX1) {
                 confirm("You Win!");
-            }
-        }
+            }     
     }
     //timer
     function startTimer(duration, display) {
         var timer = duration,
             minutes, seconds;
         setInterval(function() {
-            minutes = parseInt(timer / 60, 10)
+            minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
 
             minutes = minutes < 10 ? "0" + minutes : minutes;
