@@ -84,6 +84,10 @@ function moveGold() {
 		if (topStyle2 === topStyle && left === left2) {
 			confirm("You Win!");
 			document.location.reload();
+	function collision($div1, $div2) {
+      		if (guyX1 < goldY2 || guyY1 > goldX2 ||	guyX1 + guyY1 < goldX2 || guyX1 > goldX2 + goldY2) confirm("false");
+     	 	confirm ('true');
+    }
 		}
 	//timer
 	function startTimer(duration, display) {
