@@ -3,29 +3,25 @@ var myElement = document.getElementById('dot');
 var styles = window.getComputedStyle(myElement);
 var topStyle = parseInt(styles.top);
 var left = parseInt(styles.left);
+var guyWidth = parseInt(styles.width);
+var guyHeight = parseInt(styles.height);
 //X and Y for Guy
 var guyX1 = parseInt(left);
-var guyX2 = parseInt(left) + parseInt(styles.width);
-var guyX3 = parseInt(left) + parseInt(styles.width);
-var guyX4 = parseInt(left);
+var guyX2 = parseInt(left) + guyWidth;
 var guyY1 = parseInt(topStyle);
-var guyY2 = parseInt(topStyle);
-var guyY3 = parseInt(topStyle) + parseInt(styles.height);
-var guyY4 = parseInt(topStyle) + parseInt(styles.height);
+var guyY2 = parseInt(topStyle) + guyHeight;
 //Gold
 var myElement2 = document.getElementById('dot2');
 var styles2 = window.getComputedStyle(myElement2);
 var topStyle2 = parseInt(styles2.top);
 var left2 = parseInt(styles2.left);
+var goldWidth = parseInt(styles2.width);
+var goldHeight = parseInt(styles2.height);
 //X and Y for gold
 var goldX1 = parseInt(left2);
-var goldX2 = parseInt(left2) + parseInt(styles2.width);
-var goldX3 = parseInt(left2) + parseInt(styles2.width);
-var goldX4 = parseInt(left2);
+var goldX2 = parseInt(left2) + goldWidth;
 var goldY1 = parseInt(topStyle2);
-var goldY2 = parseInt(topStyle2);
-var goldY3 = parseInt(topStyle2) + parseInt(styles2.height);
-var goldY4 = parseInt(topStyle2) + parseInt(styles2.height);
+var goldY2 = parseInt(topStyle2) + goldHeight;
 //functions
 var speed = 5;
 
@@ -33,28 +29,32 @@ function moveLeft() {
     var newLeft = left - speed;
     left = newLeft;
     myElement.style.left = newLeft + 'px';
-
+    var changeX = window.getComputedStyle(styles.width);
+    var changeY = window.getComputedStyle(styles.height);
 }
 
 function moveUp() {
     var newTop = topStyle - speed;
     topStyle = newTop;
     myElement.style.top = newTop + 'px';
-
+    var changeX = window.getComputedStyle(styles.width);
+    var changeY = window.getComputedStyle(styles.height);
 }
 
 function moveRight() {
     var newLeft2 = left + speed;
     left = newLeft2;
     myElement.style.left = newLeft2 + 'px';
-
+    var changeX = window.getComputedStyle(styles.width);
+    var changeY = window.getComputedStyle(styles.height);
 }
 
 function moveDown() {
     var newTop2 = topStyle + speed;
     topStyle = newTop2
     myElement.style.top = newTop2 + 'px';
-
+    var changeX = window.getComputedStyle(styles.width);
+    var changeY = window.getComputedStyle(styles.height);
 }
 
 function moveSelection(evt) {
@@ -89,7 +89,7 @@ function moveGold() {
         document.location.reload();
 	//collision detection
         function collision() {
-            if (guyY4 < goldY1 || guyX2 > goldX1 || guyY1 < goldY4 || guyX1 < goldX2 || guyY3 < goldY1 && guyX4 > goldX1 || guyY2 > goldY4 && guyX2 > goldX4 || guyY1 > goldY3 && guyX1 < goldX3 || guyY4 < goldY1 && guyX4 < goldX1) {
+            if (guyY2 < goldY1 || guyX1 > goldX1 || guyY1 < goldY2 || guyX1 < goldX1 || guyY2 < goldY1 && guyX2 > goldX1 || guyY1 > goldY2 && guyX1 > goldX2 || guyY1 > goldY2 && guyX1 < goldX2 || guyY2 < goldY1 && guyX2 < goldX1) {
                 confirm("You Win!");
             }
         }
