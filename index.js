@@ -75,9 +75,6 @@ function moveGold() {
     var theLeft = Math.floor(Math.random() * screen.width) + 1;
     myElement2.style.top = theTop + 'px';
     myElement2.style.left = theLeft + 'px';
-    if (topStyle2 === topStyle && left === left2) {
-        confirm("You Win!");
-        document.location.reload();
 	//collision detection
         if (guyY2 < goldY1 || guyX1 > goldX1 || guyY1 < goldY2 || guyX1 < goldX1 || guyY2 < goldY1 && guyX2 > goldX1 || guyY1 > goldY2 && guyX1 > goldX2 || guyY1 > goldY2 && guyX1 < goldX2 || guyY2 < goldY1 && guyX2 < goldX1) {
                 confirm("You Win!");
